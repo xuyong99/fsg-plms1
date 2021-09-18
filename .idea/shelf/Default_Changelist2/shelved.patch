@@ -1,0 +1,9 @@
+Index: plms-mgmt/local_build.sh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!/usr/bin/env bash\r\n\r\n#maven编译后，本地tomcat启动前执行的脚本\r\n\r\nAPP_NAME=plms-mgmt\r\n\r\nAPP_DIR=`pwd`\r\ncd ..\r\nPLM_DIR=`pwd`\r\n\r\nCONFIG_DIR=$PLM_DIR/plms-config\r\n\r\nAPP_WEB=$PLM_DIR/$APP_NAME/target/$APP_NAME\r\n\r\nrm -rf $APP_WEB/WEB-INF/classes/properties\r\n\r\nmkdir -p $APP_WEB/WEB-INF/classes/properties\r\n\r\n# 需要复制到根目录的文件\r\nKEEP_FILES=()\r\nfor file in ${KEEP_FILES[@]}; do\r\n    cp $CONFIG_DIR/environment/dev_jpaas/$file $APP_WEB/WEB-INF/classes/\r\ndone\r\n\r\n# 需要复制到根目录conf的文件\r\nKEEP_FILES_CONF=('sa-cfg.properties' 'sa-env-cfg.properties')\r\n\r\n# 将老的目录删除掉\r\nCONF_PATH=${APP_WEB}/WEB-INF/classes/conf\r\nif [[ ! -d ${CONF_PATH} ]]; then\r\n    # 创建目录\r\n    mkdir ${CONF_PATH}\r\nfi\r\n\r\nfor file in ${KEEP_FILES_CONF[@]}; do\r\n    cp $CONFIG_DIR/environment/dev_jpaas/$file $CONF_PATH\r\ndone\r\n\r\ncp -r $CONFIG_DIR/environment/dev_jpaas/* $APP_WEB/WEB-INF/classes/properties\r\n\r\ncd $APP_WEB/WEB-INF/classes/properties\r\n\r\nfor i in `ls`; do echo >> $i; done;\r\n\r\n# 需要保留到根目录的文件进行删除，否则重复\r\nfor file in ${KEEP_FILES[@]}; do\r\n    rm -f `pwd`/$file\r\ndone\r\n\r\n# 需要保留到根目录conf的文件进行删除，否则重复\r\nfor file in ${KEEP_FILES_CONF[@]}; do\r\n    rm -f `pwd`/$file\r\ndone\r\n\r\ncat * > placeholder && rm *.properties && mv placeholder placeholder.properties\r\n\r\ncp $CONFIG_DIR/resources/mybatis/mybatis-config.xml $APP_WEB/WEB-INF/classes/\r\n\r\necho \"merge properties files done.\"\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- plms-mgmt/local_build.sh	(revision 83ad753e062a52af995dd41320cdf43aa1c8a014)
++++ plms-mgmt/local_build.sh	(date 1573697735790)

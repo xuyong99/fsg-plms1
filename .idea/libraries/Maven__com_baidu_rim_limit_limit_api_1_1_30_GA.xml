@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.baidu.rim.limit:limit-api:1.1.30-GA">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/com/baidu/rim/limit/limit-api/1.1.30-GA/limit-api-1.1.30-GA.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/com/baidu/rim/limit/limit-api/1.1.30-GA/limit-api-1.1.30-GA-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/com/baidu/rim/limit/limit-api/1.1.30-GA/limit-api-1.1.30-GA-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

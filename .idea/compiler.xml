@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="1400" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="plms-common" />
+        <module name="plms-mgmt" />
+        <module name="plms-gateway" />
+        <module name="plms-schedule-job" />
+      </profile>
+      <profile name="Annotation profile for plms-script" enabled="true">
+        <sourceOutputDir name="output/generated-sources/annotations" />
+        <sourceTestOutputDir name="output/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="plms-script" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="plms-bom" target="1.8" />
+      <module name="plms-common" target="1.8" />
+      <module name="plms-gateway" target="1.8" />
+      <module name="plms-mgmt" target="1.8" />
+      <module name="plms-schedule-job" target="1.8" />
+      <module name="plms-script" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

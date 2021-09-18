@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.baidu.rim:ris-commons:1.0.415.003">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/com/baidu/rim/ris-commons/1.0.415.003/ris-commons-1.0.415.003.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/com/baidu/rim/ris-commons/1.0.415.003/ris-commons-1.0.415.003-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/com/baidu/rim/ris-commons/1.0.415.003/ris-commons-1.0.415.003-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
